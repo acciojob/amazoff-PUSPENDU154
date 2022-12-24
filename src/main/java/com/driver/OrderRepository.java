@@ -167,10 +167,11 @@ public class OrderRepository {
         for(String partner : OrderPartnerPairMap.keySet()){
             for(String order : OrderPartnerPairMap.get(partner)){
                 if(order.equals(orderId)){
-                    ll = OrderPartnerPairMap.get(partner);
-                    OrderPartnerPairMap.remove(partner);
-                    ll.remove(order);
-                    OrderPartnerPairMap.put(partner,ll);
+//                    ll = OrderPartnerPairMap.get(partner);
+//                    OrderPartnerPairMap.remove(partner);
+//                    ll.remove(order);
+//                    OrderPartnerPairMap.put(partner,ll);
+                    OrderPartnerPairMap.get(partner).remove(order);
                     break;
                 }
             }
