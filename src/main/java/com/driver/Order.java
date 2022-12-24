@@ -25,4 +25,13 @@ public class Order {
     public int getDeliveryTime() {
         return deliveryTime;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setDeliveryTime(String deliveryTime) {
+        this.deliveryTime = (Integer.parseInt(deliveryTime.substring(0,2))*60) +
+                (Integer.parseInt(deliveryTime.substring(deliveryTime.length()-2,deliveryTime.length())));
+    }
 }
